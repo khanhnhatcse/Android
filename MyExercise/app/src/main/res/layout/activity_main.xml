@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="com.swift.nhat.myexercise.MainActivity">
+
+    <TextView
+        android:id="@+id/txtTieuDe"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30dp"
+        android:textColor="@color/colorPrimary"
+        android:textStyle="bold"
+        android:layout_centerHorizontal="true"
+        android:text="Tỉ giá" />
+
+    <TextView
+        android:id="@+id/txtGhiChu"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="(Tỉ giá quy đổi theo VNĐ)"
+        android:layout_below="@+id/txtTieuDe"
+        android:layout_centerHorizontal="true"
+        android:textColor="#ff0000"
+        android:layout_marginTop="5dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="350dp"
+        android:layout_below="@id/txtGhiChu"
+        android:layout_marginTop="10dp"
+        android:id="@+id/layoutTiGia"
+        >
+
+        <ListView
+            android:id="@+id/lvTiGia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:footerDividersEnabled="false"
+            android:headerDividersEnabled="false">
+
+
+        </ListView>
+
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btnDoiTiGia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layoutTiGia"
+        android:layout_centerHorizontal="true"
+        android:background="@color/colorPrimary"
+        android:onClick="convertMoney"
+        android:text="Đổi tỉ giá"
+        android:textColor="#ffffff"
+        android:textStyle="bold" />
+
+
+</RelativeLayout>
