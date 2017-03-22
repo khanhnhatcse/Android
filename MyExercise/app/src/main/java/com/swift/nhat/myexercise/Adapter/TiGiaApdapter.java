@@ -29,6 +29,9 @@ public class TiGiaApdapter extends ArrayAdapter<TiGia> {
                 this.data=data;
         }
 
+        private String format(float value){
+            return String.format("%.2f", value);
+        }
         @Override
         public View getView(int position, View convertView, ViewGroup parent){
                 View row=convertView;
@@ -52,7 +55,7 @@ public class TiGiaApdapter extends ArrayAdapter<TiGia> {
 
                 TiGia d=data[position];
                 holder.txtName.setText(d.getName());
-                holder.txtValue.setText(String.valueOf(d.getValue()));
+                holder.txtValue.setText(format(d.getValue()));
 
                 return row;
         }

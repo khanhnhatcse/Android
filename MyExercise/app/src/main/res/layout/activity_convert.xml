@@ -1,9 +1,115 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.swift.nhat.myexercise.convert">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    >
 
-</android.support.constraint.ConstraintLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#00C851"
+        android:id="@+id/layout_header"
+        >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Chuyển đôi tiền tệ"
+        android:layout_centerHorizontal="true"
+        android:textStyle="bold"
+        android:textSize="30dp"
+        android:padding="15dp"
+        android:textColor="#fff"
+
+        />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_below="@id/layout_header"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:id="@+id/layout_body"
+        >
+            <LinearLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Số tiền :"
+                    android:textColor="#AA66CC"
+                    android:textSize="20dp"
+                    android:padding="15dp"
+                    />
+
+                <EditText
+                    android:layout_width="150dp"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/input_currency"
+                    />
+                <Spinner
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/spinner_tiente"
+                    android:spinnerMode="dropdown"
+                    android:layout_gravity="center"
+
+
+                    />
+
+            </LinearLayout>
+        <LinearLayout
+
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Quy đổi :"
+                android:textColor="#AA66CC"
+                android:textSize="20dp"
+                android:padding="12dp"
+                />
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/out_currency"
+
+                android:textSize="25dp"
+                />
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/spinner_tiente1"
+                android:spinnerMode="dropdown"
+                android:layout_gravity="center"
+
+
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnQuyDoi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/layout_body"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:background="#1C2331"
+        android:onClick="onConvert"
+        android:padding="15dp"
+        android:text="Quy đổi ngay"
+
+        android:textColor="#ffffff" />
+
+
+</RelativeLayout>

@@ -33,9 +33,11 @@
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="350dp"
+
         android:layout_below="@id/txtGhiChu"
         android:layout_marginTop="10dp"
         android:id="@+id/layoutTiGia"
+
         >
 
         <ListView
@@ -54,13 +56,13 @@
         android:id="@+id/btnDoiTiGia"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/layoutTiGia"
-        android:layout_centerHorizontal="true"
         android:background="@color/colorPrimary"
         android:onClick="convertMoney"
         android:text="Đổi tỉ giá"
         android:textColor="#ffffff"
-        android:textStyle="bold" />
+        android:textStyle="bold"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
 
 
 </RelativeLayout>
